@@ -58,7 +58,7 @@ export default {
 .account{
   background-color: $blue-dark;
   padding: 50px 0;
-  width: 250px;
+  width: 100%;
 
     .top-account{
       width: 100%;

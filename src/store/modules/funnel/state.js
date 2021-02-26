@@ -1,6 +1,10 @@
 const state = {
     items:{
         data: []
+    },
+
+    funnelId:{
+        data:[]
     }
 }
 

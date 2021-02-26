@@ -1,13 +1,15 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import companies from './modules/companies'
+import funnel from './modules/funnel'
+import recent_update from './modules/recent_update'
 
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
     modules:{
-      companies
+      funnel,
+      recent_update
     }
 })
 

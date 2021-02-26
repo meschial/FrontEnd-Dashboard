@@ -15,6 +15,12 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/scss/_main';
 
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0;
+    outline: 0;
+} 
+
 .input-group-text{
         border: none;
         background-color: #fff;

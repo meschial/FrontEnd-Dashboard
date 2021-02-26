@@ -6,7 +6,7 @@
         <main>
             
             <div class="pages">
-                <router-view></router-view>
+                <router-view />
             </div>
 
         </main>

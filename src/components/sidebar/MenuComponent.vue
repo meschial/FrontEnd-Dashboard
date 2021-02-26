@@ -1,12 +1,11 @@
 <template>
   <div class="menu">
     <ul>
-      <li><router-link :to="{name: 'home'}"><i class="fa fa-home"></i> Inicio</router-link></li>
-      <li><router-link :to="{name: 'funnel'}"><i class="fa fa-filter"></i> Funil</router-link></li>
-      <li><router-link :to="{name: 'integrations'}"><i class="fa fa-box"></i> Integrações</router-link></li>
-      <li><router-link :to="{name: 'settings'}"><i class="fa fa-cog"></i> Configurações</router-link></li>
-      <li><router-link :to="{name: 'settings'}"><i class="fa fa-chart-bar"></i> Relatórios</router-link></li>
-      
+      <router-link :to="{name: 'home'}"><li><i class="fa fa-home"></i> Inicio</li></router-link>
+      <router-link :to="{name: 'funnel'}"><li><i class="fa fa-filter"></i> Funil</li></router-link>
+      <router-link :to="{name: 'integrations'}"><li><i class="fa fa-box"></i> Integrações</li></router-link>
+      <router-link :to="{name: 'settings'}"><li><i class="fa fa-cog"></i> Configurações</li></router-link>
+      <router-link :to="{name: 'settings'}"><li><i class="fa fa-chart-bar"></i> Relatórios</li></router-link>
     </ul>
   </div>
 </template>
@@ -20,24 +19,24 @@ export default {
 <style lang="scss">
   .menu{
     margin-top: 20px;
-    width: 250px;
+    width: 100%;
 
     ul {
       padding: 0;
-
-      li {
-        padding: 20px 10px 10px 20px;
-        font-size: 18px;
-        list-style: none;
-
-        a{
+      a{
           color: $font-blue;
           text-decoration: none;
         }
-      }
-      li:hover{
-          background-color: $blue-dark;
+
+        li {
+          padding: 20px 10px 10px 20px;
+          font-size: 18px;
+          list-style: none;
+
         }
+        li:hover{
+            background-color: $blue-dark;
+          }
     }
   
   }

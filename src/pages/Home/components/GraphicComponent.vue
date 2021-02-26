@@ -12,22 +12,25 @@ export default {
     name: 'GraphicComponent',
     components: {
   },
+  
   data() {
     return {
       salesChartID: "salesChart",
       bigLineChart: {
         allData: [
-          [0, 20, 10, 30, 15, 40, 20, 60, 60],
+          [0, 20, 70, 30, 15, 40, 20, 60],
         ],
         activeIndex: 0,
       },
     };
   },
+
   methods: {
     initBigChart() {
       chart.destroy();
     },
   },
+
   mounted() {
     chart = new Chart(
       document.getElementById(this.salesChartID).getContext("2d"),

@@ -3,70 +3,49 @@
         <span>Funis Favoritos</span>
 
         <div class="scroll">
-            <div class="top-funnel">
-                <div class="avatar">
-                    <span><i class="fa fa-filter"></i></span>
-                </div>
-                <div class="info">
-                    <p class="name">Funil de vendas para leds</p>
-                    <p class="status">Postado recente</p>
-                </div>
+
+            <div class="top-funnel" v-for="(funil, index) in funnel.items" :key="index">
+                <router-link :to="{name: 'funnelId', params: {id: funil.id}}">
+                    <div class="avatar">
+                        <span><i class="fa fa-filter"></i></span>
+                    </div>
+                    <div class="info">
+                        <p>{{funil.name}}</p>
+                        <p class="status">{{funil.email}}</p>
+                    </div>
+                </router-link>
             </div>
-            <hr>
-            <div class="top-funnel">
-                <div class="avatar">
-                    <span><i class="fa fa-filter"></i></span>
-                </div>
-                <div class="info">
-                    <p class="name">Funil de vendas para leds</p>
-                    <p class="status">Postado recente</p>
-                </div>
-            </div>
-            <hr>
-            <div class="top-funnel">
-                <div class="avatar">
-                    <span><i class="fa fa-filter"></i></span>
-                </div>
-                <div class="info">
-                    <p class="name">Funil de vendas para leds</p>
-                    <p class="status">Postado recente</p>
-                </div>
-            </div>
-            <hr>
-            <div class="top-funnel">
-                <div class="avatar">
-                    <span><i class="fa fa-filter"></i></span>
-                </div>
-                <div class="info">
-                    <p class="name">Funil de vendas para leds</p>
-                    <p class="status">Postado recente</p>
-                </div>
-            </div>
-            <hr>
-            <div class="top-funnel">
-                <div class="avatar">
-                    <span><i class="fa fa-filter"></i></span>
-                </div>
-                <div class="info">
-                    <p class="name">Funil de vendas para leds</p>
-                    <p class="status">Postado recente</p>
-                </div>
-            </div>
+            
         </div>
     </div>
 </template>
 
 <script>
+import { mapActions, mapState } from 'vuex'
 export default {
     name: 'MainFunnelComponent',
 
-    
+    mounted(){
+        this.getFunnel()
+        .catch(response => this.$vToastify.error("Falha ao Carregar Funis Favoritos", "Erro! "))
+    },
+
+    computed:{
+        ...mapState({
+            funnel: state => state.funnel
+        })
+    },
+
+    methods:{
+        ...mapActions([
+            'getFunnel'
+        ])
+    }
 }
 </script>
 
 
 <style lang="scss" scoped>
-@import '@/assets/scss/_main';
 
 .main-funnel{
     margin-top: 50px;
@@ -82,37 +61,39 @@ export default {
         height: 350px;        
         .top-funnel{
             width: 100%;
-            display: flex;
-            align-items: center;
-            margin: 15px 0;
+            border-bottom: 1px solid #f1f1f1;
 
-            .avatar{
-                span{
-                    display: block;
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 25px;
-                }
-            }
+            a{
+                display: flex;
+                align-items: center;
+                margin: 15px 0;
+                text-decoration: none;
 
-            .info{
-                
-                p{
-                    margin: 0;
-                    color: $blue;
+                .avatar{
+                    span{
+                        display: block;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 25px;
+                    }
                 }
 
-                .name{
-                    font-size: 15px;
-                }
+                .info{
+                    
+                    p{
+                        margin: 0;
+                        color: $blue;
+                        font-size: 15px;
+                    }
 
-                .status{
-                    font-size: 10px;
-                    color: #222;
+                    .status{
+                        font-size: 10px;
+                        color: #222;
+                    }
                 }
             }
         }
