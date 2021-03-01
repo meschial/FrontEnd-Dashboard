@@ -39,9 +39,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/_main';
 
-.menu-righr{
-    margin: 65px 0;
-}
 </style>

@@ -28,4 +28,10 @@ export default {
     }
 }
 
+@media screen and (max-width: 768px) and (min-width: 300px){
+    .training{
+       margin-bottom: 50px; 
+    }
+}
+
 </style>

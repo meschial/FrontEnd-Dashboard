@@ -1,5 +1,6 @@
 <template>
   <div class="sidebar">
+    
       <div class="top-bar">
           <LogoComponent />
       </div>

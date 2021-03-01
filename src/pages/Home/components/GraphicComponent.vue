@@ -106,13 +106,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/_main';
 
 .chart-area{
     background-color: $blue;
     padding: 20px;
     border-radius: 10px;
     height: 450px;
+}
+@media (max-width: 768px){
+  .chart-area[data-v-197d2162] {
+    height: auto;
+  }
+
 }
 
 </style>

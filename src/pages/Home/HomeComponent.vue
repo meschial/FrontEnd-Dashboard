@@ -1,33 +1,31 @@
 <template>
       <div class="row">
-        <div class="col-md-9">
-          <header class="title_pages">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-9">
+          <div class="title_pages">
             <p>Olá, Rafael Marques...<br>Bora faturar!</p>
-          </header>
-
-          <div class="row">
-            <div class="col-12 col-md-12">
-              <GraphicComponent />
-            </div>
           </div>
 
-          <div class="row mt-5">
-            <div class="col-12 col-md-12">
+            <div class="col-md-12">
+              <GraphicComponent />
+            </div>
+
+          <div class="mt-5">
+            <div class="col-md-12">
               <BannerComponent />
             </div>
           </div>
 
           <div class="row mt-5">
-            <div class="col-12 col-md-6">
+            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
               <TrainingComponent />
             </div>
 
-            <div class="col-12 col-md-6">
+            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
               <TrainingComponent />
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-3">
           <MenuRightComponent />
         </div>
       </div>
@@ -55,9 +53,17 @@ export default {
 
 <style lang="scss" scoped>
 .title_pages{
-    margin: 60px 0 30px 0;
     font-size: 25px;
     color: $blue;
     font-weight: bold;
+
+    p{
+      margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 768px) and (min-width: 300px){
+  .title_pages{
+    margin-left: 20px;
+  }
 }
 </style>

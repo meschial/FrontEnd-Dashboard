@@ -1,5 +1,4 @@
 import HomeComponent from '@/pages/Home/HomeComponent'
-import TesteComponent from '@/pages/Home/TesteComponent'
 
 import FunnelComponent from '@/pages/Funnel/FunnelComponent'
 import FunnelIdComponent from '@/pages/Funnel/views/FunnelIdComponent'
@@ -10,7 +9,6 @@ import IntegrationsComponent from '@/pages/Integrations/IntegrationsComponent'
 
 const routes = [
     { path: '/', name:'home', component: HomeComponent },
-    { path: '/teste', name:'teste', component: TesteComponent },
 
     { path: '/funil', name:'funnel', component: FunnelComponent },
     { path: '/funil/:id', name:'funnelId', component: FunnelIdComponent, props: true },
