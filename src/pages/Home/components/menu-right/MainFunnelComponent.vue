@@ -98,5 +98,18 @@ export default {
             }
         }
     }
+    ::-webkit-scrollbar-track {
+        background-color: #F4F4F4;
+        display: block;
+    }
+    ::-webkit-scrollbar {
+        width: 3px;
+        background: #F4F4F4;
+        display: block;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: $blue;
+        display: block;
+    }
 }
 </style>

@@ -1,12 +1,11 @@
 <template>
     <div id="app">
 
-        <MenuMobileComponent />
-        
-        <SideBarComponent />
+        <MenuMobileComponent  />
+       
+        <SideBarComponent  />
 
         <main>
-            
             <div class="pages">
                 <router-view />
             </div>
@@ -21,6 +20,7 @@ import MenuMobileComponent from '@/components/MenuMobileComponent';
 
 export default {
     name: 'DashboardComponent',
+
     components:{
         SideBarComponent,
         MenuMobileComponent,

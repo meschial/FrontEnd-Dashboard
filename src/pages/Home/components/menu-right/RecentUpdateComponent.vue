@@ -70,5 +70,15 @@ export default {
             }
         }
     }
+    ::-webkit-scrollbar-track {
+        background-color: #F4F4F4;
+    }
+    ::-webkit-scrollbar {
+        width: 3px;
+        background: #F4F4F4;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: $blue;
+    }
 }
 </style>
