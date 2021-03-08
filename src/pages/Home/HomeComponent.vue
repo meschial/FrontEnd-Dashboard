@@ -32,7 +32,6 @@
 </template>
 
 <script>
-/* eslint-disable */
 import DashboardComponent from '../Dashboard/DashboardComponent'
 import GraphicComponent from './components/GraphicComponent'
 import BannerComponent from './components/BannerComponent'
@@ -52,15 +51,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .title_pages{
     font-size: 25px;
     color: $blue;
     font-weight: bold;
-
-    p{
-      margin-bottom: 30px;
-    }
+    margin-bottom: 30px;
 }
+
 @media screen and (max-width: 768px) and (min-width: 300px){
   .title_pages{
     margin-left: 20px;

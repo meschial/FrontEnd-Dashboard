@@ -1,32 +1,29 @@
 <template>
-  <div class="row">
-      <div class="col-md-9">
-        <header class="title_pages">
-          <p>Funil</p>
-          <h2>{{funnel}}</h2>
-        </header>
-      </div>
+ <div class="row">
+    <div class="title_pages">
+      <p>Funil</p>
+    </div>
   </div>
 </template>
 
 <script>
-import {mapState } from 'vuex'
 export default {
   name: 'FunnelComponent',
 
-  computed:{
-        ...mapState({
-            funnel: state => state.funnel
-        })
-    },
 }
 </script>
 
 <style lang="scss" scoped>
 .title_pages{
-    margin: 65px 0;
     font-size: 25px;
     color: $blue;
     font-weight: bold;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) and (min-width: 300px){
+  .title_pages{
+    margin-left: 20px;
+  }
 }
 </style>

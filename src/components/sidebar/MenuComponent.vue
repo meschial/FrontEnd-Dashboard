@@ -4,8 +4,8 @@
       <router-link :to="{name: 'home'}"><li><i class="fa fa-home"></i> Inicio</li></router-link>
       <router-link :to="{name: 'funnel'}"><li><i class="fa fa-filter"></i> Funil</li></router-link>
       <router-link :to="{name: 'integrations'}"><li><i class="fa fa-box"></i> Integrações</li></router-link>
-      <router-link :to="{name: 'settings'}"><li><i class="fa fa-cog"></i> Configurações</li></router-link>
-      <router-link :to="{name: 'settings'}"><li><i class="fa fa-chart-bar"></i> Relatórios</li></router-link>
+      <router-link :to="{name: 'integrations'}"><li><i class="fa fa-cog"></i> Configurações</li></router-link>
+      <router-link :to="{name: 'pages'}"><li><i class="fa fa-file"></i> Páginas</li></router-link>
     </ul>
   </div>
 </template>

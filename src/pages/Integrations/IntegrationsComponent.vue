@@ -15,10 +15,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .title_pages{
-    margin: 65px 0;
     font-size: 25px;
     color: $blue;
     font-weight: bold;
+    margin-bottom: 30px;
 }
 </style>

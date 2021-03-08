@@ -4,7 +4,7 @@ import FunnelComponent from '@/pages/Funnel/FunnelComponent'
 import FunnelIdComponent from '@/pages/Funnel/views/FunnelIdComponent'
 import RecentUpdadeIdComponent from '@/pages/Funnel/views/RecentUpdadeIdComponent'
 
-import SettingsComponent from '@/pages/Settings/SettingsComponent'
+import PagesComponent from '@/pages/Pages/PagesComponent'
 import IntegrationsComponent from '@/pages/Integrations/IntegrationsComponent'
 
 const routes = [
@@ -14,7 +14,7 @@ const routes = [
     { path: '/funil/:id', name:'funnelId', component: FunnelIdComponent, props: true },
     { path: '/funil/atualizacao/:id', name:'recentId', component: RecentUpdadeIdComponent, props: true },
 
-    { path: '/configuracoes', name:'settings', component: SettingsComponent },
+    { path: '/paginas', name:'pages', component: PagesComponent },
     { path: '/integracoes', name:'integrations', component: IntegrationsComponent },
   ]
   
